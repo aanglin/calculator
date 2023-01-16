@@ -2,22 +2,22 @@ const screen = document.querySelector('.screen');
 const container = document.querySelector('.buttons');
 
 let calculation = [];
-let accumulativeCalculation = "";
+let stringCalculation = "";
 
 container.addEventListener('click', (e) => {
     if (e.target.tagName === "BUTTON") {
         const value = e.target.textContent;
         if (value === "CLEAR") {
             calculation = [];
-            accumulativeCalculation = "";
+            stringCalculation = "";
             screen.textContent = '0';
         } else if (value === "=") {
-            accumulativeCalculation = calculation.reduce((acc, cur) => acc + cur);
-            screen.textContent = new Function('return ' + accumulativeCalculation)();
+            stringCalculation = calculation.reduce((acc, cur) => acc + cur);
+            screen.textContent = new Function('return ' + stringCalculation)();
         } else {
             calculation.push(value);
-            accumulativeCalculation = calculation.reduce((acc, cur) => acc + cur);
-            screen.textContent = accumulativeCalculation;
+            stringCalculation = calculation.reduce((acc, cur) => acc + cur);
+            screen.textContent = stringCalculation;
         }
     }
 });
