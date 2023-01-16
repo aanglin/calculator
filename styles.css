@@ -49,6 +49,9 @@ button:active{
     background-color: rgb(252,226,27);
     font-size: 30px;
 }
+#clear1 {
+    width: 100%;
+}
 #clear:hover{
     background-color: rgb(252,201,17);
 }
