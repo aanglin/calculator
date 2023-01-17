@@ -13,7 +13,14 @@ container.addEventListener('click', (e) => {
             screen.textContent = '0';
         } else if (value === "=") {
             stringCalculation = calculation.reduce((acc, cur) => acc + cur);
-            screen.textContent = new Function('return ' + stringCalculation)();
+            let result = new Function('return ' + stringCalculation)();
+            // Checking to see if the the answer has digits after the decimal point. If it does then the first code will run.
+            if (result.toString().indexOf(".") != -1) {
+                screen.textContent = (result).toFixed(5);
+                // if it doesn't have digits then it will run this code.
+            } else {
+                screen.textContent = result;
+            }
         } else {
             calculation.push(value);
             stringCalculation = calculation.reduce((acc, cur) => acc + cur);
