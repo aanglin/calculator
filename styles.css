@@ -56,8 +56,19 @@ button:active{
     background-color: rgb(252,201,17);
 }
 @media only screen and (min-width: 375px) and (max-width: 812px) {
+    .calculator {
+        width: 90%; /* adjust the width of the calculator container */
+    }
+    .screen {
+        font-size: 30px; /* decrease the font size of the screen */
+    }
     button {
-    display: flex;
-    flex-wrap: wrap;
-    } 
+        width: 40px; /* decrease the size of the buttons */
+        height: 40px;
+        font-size: 30px;
+    }
+    #clear {
+        font-size: 20px; /* decrease the font size of the clear button */
+    }
 }
+
