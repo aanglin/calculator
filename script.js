@@ -21,6 +21,20 @@ container.addEventListener('click', (e) => {
             } else {
                 screen.textContent = result;
             }
+        }else if (value === "%") {
+            let currentNum = '';
+            for(let i=calculation.length-1; i>=0; i--) {
+                if(isNaN(calculation[i]) && calculation[i] !== '.') {
+                    break;
+                }
+                currentNum = calculation[i] + currentNum;
+            }
+            currentNum = parseFloat(currentNum);
+            currentNum /= 100;
+            calculation.splice(calculation.indexOf(currentNum) + 1);
+            calculation.push(currentNum);
+            stringCalculation = calculation.reduce((acc, cur) => acc + cur);
+            screen.textContent = stringCalculation;
         } else {
             calculation.push(value);
             stringCalculation = calculation.reduce((acc, cur) => acc + cur);
