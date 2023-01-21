@@ -66,7 +66,7 @@ button:active{
     }
     .calculator {
         background-color: black; /* match the color of an iPhone screen */
-        width: 300px; /* adjust the width of the calculator container */
+        width: 390px; /* adjust the width of the calculator container */
         height: 500px;
         border-radius: 20px; /* add border radius to make the container look like an iPhone screen */
     }
