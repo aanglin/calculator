@@ -68,6 +68,7 @@ button:active{
     }
     .calculator {
         background-color: black; 
+        padding-left: 60px;
     }
     .screen {
         background-color: black;
