@@ -7,7 +7,7 @@ let stringCalculation = "";
 container.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     const value = e.target.textContent;
-    if (value === "CLEAR") {
+    if (value === "Clear") {
       calculation = [];
       stringCalculation = "";
       screen.textContent = "0";

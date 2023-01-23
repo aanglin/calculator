@@ -56,7 +56,7 @@ button:active {
   width: 100%;
   font-size: 30px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 499px) {
   body {
     align-items: center;
     width: 100%;
@@ -80,6 +80,7 @@ button:active {
 
   .buttons {
     padding-top: 10px;
+    padding-left: 12px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-evenly;
@@ -107,3 +108,55 @@ button:active {
     width: 100%;
   }
 }
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+    body {
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background-color: black;
+    }
+    .calculator {
+      background-color: black;
+      padding-left: 60px;
+    }
+    .screen {
+      background-color: black;
+      color: white;
+      width: 95%;
+      font-size: 50px;
+      text-align: right;
+      padding: 15px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+  
+    .buttons {
+      padding-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: space-evenly;
+      align-items: center;
+      width: 75%;
+    }
+    button {
+      align-items: center;
+      margin: 7px;
+      width: 80px;
+      height: 80px;
+      border-radius: 55px;
+      font-size: 30px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+    #equals-clear {
+      grid-row: 5/6;
+      grid-column: 1/5; /* Span across 3rd to 5th column */
+      display: flex;
+      justify-content: space-between;
+    }
+    #equals,
+    #clear {
+      width: 100%;
+    }
+  }
+  
