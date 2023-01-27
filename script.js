@@ -1,5 +1,11 @@
 const screen = document.querySelector(".screen");
 const container = document.querySelector(".buttons");
+let btn = document.getElementById('btn');
+let billAmountInput = document.getElementById('bill-amount');
+let tipPercentageInput = document.getElementById('tip-percentage');
+let tipAmountInput = document.getElementById('tip-amount');
+let totalBillInput = document.getElementById('total-bill');
+let clearBtn = document.getElementById('clear-btn');
 
 let calculation = [];
 let stringCalculation = "";
@@ -41,6 +47,22 @@ container.addEventListener("click", (e) => {
       screen.textContent = stringCalculation;
     }
   }
+});
+
+clearBtn.addEventListener('click', function(){
+  billAmountInput.value = "";
+  tipPercentageInput.value = "";
+  tipAmountInput.value = "";
+  totalBillInput.value = "";
+});
+
+btn.addEventListener('click', function(){
+  let billAmount = parseFloat(billAmountInput.value);
+  let tipPercentage = parseFloat(tipPercentageInput.value);
+  let tipAmount = billAmount * (tipPercentage / 100);
+  let totalBill = billAmount + tipAmount;
+  tipAmountInput.value = tipAmount.toFixed(2);
+  totalBillInput.value = totalBill.toFixed(2);
 });
 
 // The time complexity of the above code is O(1) , this is because regardless of the number of buttons or actions performed on them, the code only performs a constant number of operations each time a button is clicked.
