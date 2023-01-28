@@ -58,14 +58,14 @@ button:active {
   font-size: 30px;
 }
 #toggle-button {
-  width: 100%;
+  width: 90%;
   background-color: red;
 }
 #tip-calc {
   padding-left: 50px;
   padding-bottom: 5%;
   font-size: larger;
-  display: none;
+  /* display: none; */
 }
 h1 {
   color: white;
@@ -140,6 +140,11 @@ h1 {
   #clear-btn:hover {
   background-color: rgb(252, 201, 17);
   }
+  #toggle-button1 {
+    width: 90%;
+    background-color: red;
+    display: none;
+  }
 @media only screen and (max-width: 499px) {
   body {
     align-items: center;
@@ -190,6 +195,9 @@ h1 {
   #equals,
   #clear {
     width: 100%;
+  }
+  #tip-calc {
+    display: none;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 600px) {
@@ -242,6 +250,20 @@ h1 {
     #clear {
       width: 100%;
     }
-  
+    #container {
+      background-color: black;
+      color: white;
+      padding-right: 115px;
+    }
+    input{
+      background-color: black;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid white;
+    }
+    #tip-calc {
+      display: none;
+    }
   }
   
