@@ -57,11 +57,15 @@ button:active {
   width: 100%;
   font-size: 30px;
 }
+#toggle-button {
+  width: 100%;
+  background-color: red;
+}
 #tip-calc {
   padding-left: 50px;
   padding-bottom: 5%;
   font-size: larger;
-  
+  display: none;
 }
 h1 {
   color: white;
@@ -238,5 +242,6 @@ h1 {
     #clear {
       width: 100%;
     }
+  
   }
   

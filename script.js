@@ -7,6 +7,21 @@ let tipAmountInput = document.getElementById('tip-amount');
 let totalBillInput = document.getElementById('total-bill');
 let clearBtn = document.getElementById('clear-btn');
 
+var toggleButton = document.getElementById("toggle-button");
+  if (window.innerWidth < 600) {
+    toggleButton.style.display = "block";
+  } else {
+    toggleButton.style.display = "none";
+  }
+  window.onresize = function() {
+    if (window.innerWidth < 600) {
+      toggleButton.style.display = "block";
+    } else {
+      toggleButton.style.display = "none";
+    }
+  };
+  
+
 let calculation = [];
 let stringCalculation = "";
 
