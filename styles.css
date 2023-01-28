@@ -196,6 +196,11 @@ h1 {
   #clear {
     width: 100%;
   }
+  #container {
+    background-color: black;
+    color: white;
+    padding-right: 115px;
+  }
   input{
     background-color: black;
     border-top: none;
