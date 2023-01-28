@@ -196,6 +196,13 @@ h1 {
   #clear {
     width: 100%;
   }
+  input{
+    background-color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid white;
+  }
   #tip-calc {
     display: none;
   }
