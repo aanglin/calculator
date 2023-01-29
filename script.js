@@ -1,39 +1,38 @@
 const screen = document.querySelector(".screen");
 const container = document.querySelector(".buttons");
-let btn = document.getElementById('btn');
-let billAmountInput = document.getElementById('bill-amount');
-let tipPercentageInput = document.getElementById('tip-percentage');
-let tipAmountInput = document.getElementById('tip-amount');
-let totalBillInput = document.getElementById('total-bill');
-let clearBtn = document.getElementById('clear-btn');
+let btn = document.getElementById("btn");
+let billAmountInput = document.getElementById("bill-amount");
+let tipPercentageInput = document.getElementById("tip-percentage");
+let tipAmountInput = document.getElementById("tip-amount");
+let totalBillInput = document.getElementById("total-bill");
+let clearBtn = document.getElementById("clear-btn");
 document.getElementById("toggle-button").addEventListener("click", toggleDivs);
 document.getElementById("toggle-button1").addEventListener("click", toggleDivs);
 
 var toggleButton = document.getElementById("toggle-button");
+if (window.innerWidth < 600) {
+  toggleButton.style.display = "block";
+} else {
+  toggleButton.style.display = "none";
+}
+window.onresize = function () {
   if (window.innerWidth < 600) {
     toggleButton.style.display = "block";
   } else {
     toggleButton.style.display = "none";
   }
-  window.onresize = function() {
-    if (window.innerWidth < 600) {
-      toggleButton.style.display = "block";
-    } else {
-      toggleButton.style.display = "none";
-    }
-  };
-  function toggleDivs() {
-    var calculatorDiv = document.getElementsByClassName("calculator")[0];
-    var tipCalcDiv = document.getElementById("tip-calc");
-    if (calculatorDiv.style.display === "block") {
-      calculatorDiv.style.display = "none";
-      tipCalcDiv.style.display = "block";
-    } else {
-      calculatorDiv.style.display = "block";
-      tipCalcDiv.style.display = "none";
-    }
+};
+function toggleDivs() {
+  var calculatorDiv = document.getElementsByClassName("calculator")[0];
+  var tipCalcDiv = document.getElementById("tip-calc");
+  if (calculatorDiv.style.display === "block") {
+    calculatorDiv.style.display = "none";
+    tipCalcDiv.style.display = "block";
+  } else {
+    calculatorDiv.style.display = "block";
+    tipCalcDiv.style.display = "none";
   }
-  
+}
 
 let calculation = [];
 let stringCalculation = "";
@@ -41,7 +40,9 @@ let stringCalculation = "";
 container.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     const value = e.target.textContent;
-    if (value === "Clear") {
+    if (value === "Bill/Tip") {
+      screen.textContent = "0";
+    } else if (value === "Clear") {
       calculation = [];
       stringCalculation = "";
       screen.textContent = "0";
@@ -77,14 +78,14 @@ container.addEventListener("click", (e) => {
   }
 });
 
-clearBtn.addEventListener('click', function(){
+clearBtn.addEventListener("click", function () {
   billAmountInput.value = "";
   tipPercentageInput.value = "";
   tipAmountInput.value = "";
   totalBillInput.value = "";
 });
 
-btn.addEventListener('click', function(){
+btn.addEventListener("click", function () {
   let billAmount = parseFloat(billAmountInput.value);
   let tipPercentage = parseFloat(tipPercentageInput.value);
   let tipAmount = billAmount * (tipPercentage / 100);
