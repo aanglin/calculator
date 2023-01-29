@@ -213,6 +213,12 @@ h1 {
   #tip-calc {
     display: none;
   }
+  #toggle-button1 {
+    width: 85%;
+    height: 80%;
+    display: block;
+    background-color: red;
+  }
 }
 @media only screen and (min-width: 500px) and (max-width: 600px) {
   body {
