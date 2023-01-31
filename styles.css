@@ -167,12 +167,16 @@ input {
 }
 @media only screen and (max-width: 499px) {
   body {
+    background-color: black;
+    width: auto;
+    overflow: hidden;
+  }
+  .iphone {
     align-items: center;
-    width: 390px;
+    width: auto;
     height: auto;
     background-color: black;
-    border: none;
-    box-shadow: none;
+    overflow: hidden;
   }
   .calculator {
     background-color: black;
@@ -240,6 +244,7 @@ input {
   }
   #tip-calc {
     display: none;
+    overflow: hidden;
   }
   #toggle-button1 {
     width: 80%;
