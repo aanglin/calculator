@@ -57,19 +57,10 @@ container.addEventListener("click", (e) => {
         screen.textContent = result;
       }
     } else if (value === "%") {
-      let currentNum = "";
-      for (let i = calculation.length - 1; i >= 0; i--) {
-        if (isNaN(calculation[i]) && calculation[i] !== ".") {
-          break;
-        }
-        currentNum = calculation[i] + currentNum;
-      }
-      currentNum = parseFloat(currentNum);
-      currentNum /= 100;
-      calculation.splice(calculation.indexOf(currentNum) + 1);
-      calculation.push(currentNum);
-      stringCalculation = calculation.reduce((acc, cur) => acc + cur);
-      screen.textContent = stringCalculation;
+      let result = new Function("return " + stringCalculation)();
+      result /= 100;
+      calculation = [result.toString()];
+      stringCalculation = result.toString();
     } else {
       calculation.push(value);
       stringCalculation = calculation.reduce((acc, cur) => acc + cur);
@@ -93,4 +84,3 @@ btn.addEventListener("click", function () {
   tipAmountInput.value = tipAmount.toFixed(2);
   totalBillInput.value = totalBill.toFixed(2);
 });
-
