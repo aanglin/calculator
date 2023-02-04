@@ -181,7 +181,7 @@ input {
   } */
   .calculator {
     background-color: black;
-    padding-left: 70px;
+    padding-left: 450px;
   }
   .space{
     padding-top: 155px;
@@ -242,7 +242,9 @@ input {
     border-right: none;
     border-bottom: 1px solid white;
   }
-  
+  #buttonSpace {
+    padding-left: 30px;
+  }
   #padding {
    overflow: hidden; 
    padding-right: 24rem;
