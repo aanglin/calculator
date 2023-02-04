@@ -45,6 +45,9 @@ button:hover {
 button:active {
   background-color: rgb(232, 232, 232);
 }
+#multiply {
+  padding: 15px;
+}
 #clear {
   width: 160px;
   background-color: rgb(252, 226, 27);
