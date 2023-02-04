@@ -168,7 +168,7 @@ input {
 @media only screen and (max-width: 499px) {
   body {
     background-color: black;
-    width: auto;
+    width: 100%;
     overflow: hidden;
   }
   .iphone {
