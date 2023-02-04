@@ -242,10 +242,7 @@ input {
     border-right: none;
     border-bottom: 1px solid white;
   }
-  #btn{
-    width: fit-content;
-    padding-right: 20px;
-  }
+  
   #padding {
    overflow: hidden; 
    padding-right: 24rem;
