@@ -172,16 +172,10 @@ input {
     height: 100%;
     overflow: hidden;
   }
-  /* .iphone {
-    align-items: center;
-    width: 100%;
-    height: auto;
-    background-color: black;
-    overflow: hidden;
-  } */
   .calculator {
     background-color: black;
     padding-left: 450px;
+    overflow: hidden;
   }
   .space{
     padding-top: 155px;
