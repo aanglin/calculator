@@ -244,9 +244,13 @@ input {
   #btn{
     width: fit-content;
   }
+  #padding {
+   overflow: hidden; 
+   padding-right: 24rem;
+  }
   #tip-calc {
     display: none;
-    overflow: hidden;
+   
   }
   #toggle-button1 {
     width: 80%;
@@ -321,12 +325,13 @@ input {
     border-right: none;
     border-bottom: 1px solid white;
   }
+  
   #tip-calc {
     display: none;
   }
   #toggle-button1 {
     width: 80%;
-    height: 80%;
+    height: 5%;
     display: block;
     background-color: red;
   }
